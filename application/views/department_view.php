@@ -43,7 +43,7 @@
                             <a href="<?= base_url('department/edit/' . $department->department_id) ?>" class="bg-orange-500 text-white px-2 py-1 rounded-md hover:bg-orange-600">Edit</a>
                         </td>
                         <td class="px-4 py-2 border-b text-center">
-                            <a href="<?= base_url('department/delete/' . $department->department_id) ?>" onclick="return confirm('Are you sure?');" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Delete</a>
+                            <a href="<?= base_url('department/delete/' . $department->department_id) ?>" onclick="return confirm('Are you sure to delete this Department?');" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Delete</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
