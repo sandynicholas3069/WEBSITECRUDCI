@@ -1,6 +1,6 @@
 <?php
 class Employee_model extends CI_Model {
-    public function __construct(){
+    public function __construct() {
         parent::__construct();
     }
 
@@ -11,20 +11,20 @@ class Employee_model extends CI_Model {
         return $this->db->get()->result();
     }
 
-    public function insert_employee($data){
-        $this->db->insert('employee', $data);
+    public function insert_employee($data) {
+        return $this->db->insert('employee', $data);
     }
 
-    public function get_employee($id){
-        $this->db->get_where('employee', array('id' => $id))->row();
+    public function get_employee($id) {
+        return $this->db->get_where('employee', array('id' => $id))->row();
     }
 
-    public function update_employee($id, $data){
+    public function update_employee($id, $data) {
         $this->db->where('id', $id);
         return $this->db->update('employee', $data);
     }
 
-    public function delete_employee($id){
+    public function delete_employee($id) {
         $this->db->where('id', $id);
         return $this->db->delete('employee');
     }

@@ -50,13 +50,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'employee';
+
 $route['employee'] = 'employee/index'; // Menampilkan daftar employee
 $route['employee/add'] = 'employee/add'; // Menampilkan form tambah employee
 $route['employee/edit/(:num)'] = 'employee/edit/$1'; // Menampilkan form edit employee
 $route['employee/delete/(:num)'] = 'employee/delete/$1'; // Rute untuk delete employee
+
 $route['department'] = 'department/index'; // Menampilkan daftar department
 $route['department/add'] = 'department/add'; // Menampilkan form tambah department
 $route['department/edit/(:num)'] = 'department/edit/$1'; // Menampilkan form edit department
 $route['department/delete/(:num)'] = 'department/delete/$1'; // Rute untuk delete department
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

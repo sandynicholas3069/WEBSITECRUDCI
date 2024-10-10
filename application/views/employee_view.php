@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="flex justify-between items-center mb-6">
-            <a href="<?= base_url('employee/create') ?>" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Add Employee</a>
+            <a href="<?= base_url('employee/create') ?>" class="bg-orange-500 text-white px-4 py-2 rounded-md shadow hover:bg-orange-600 transition">Add Employee</a>
         </div>
         <div class="bg-gray-900 shadow-lg rounded-lg p-8 overflow-x-auto">
             <table class="min-w-full max-w-full table-auto bg-gray-800 text-orange-300 rounded-md">
@@ -43,7 +43,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($employees as $employee) : ?>
+                    <?php foreach ($employees as $employee): ?>
                     <tr>
                         <td class="px-4 py-2 border-b"><?= $employee->id ?></td>
                         <td class="px-4 py-2 border-b"><?= $employee->name ?></td>
@@ -56,10 +56,10 @@
                         <td class="px-4 py-2 border-b"><?= $employee->salary ?></td>
                         <td class="px-4 py-2 border-b"><?= $employee->department_name ?></td>
                         <td class="px-4 py-2 border-b text-center">
-                            <a href="<?= base_url('employee/edit/'.$employee->id) ?>" class="bg-orange-500 text-white px-2 py-1 rounded-md hover:bg-orange-600">Edit</a>
+                            <a href="<?= base_url('employee/edit/' . $employee->id) ?>" class="bg-orange-500 text-white px-2 py-1 rounded-md hover:bg-orange-600">Edit</a>
                         </td>
                         <td class="px-4 py-2 border-b text-center">
-                            <a href="<?= base_url('employee/delete/'.$employee->id) ?>" onclick="return confirm('Are you sure to delete this Employee?')" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Delete</a>
+                            <a href="<?= base_url('employee/delete/' . $employee->id) ?>" onclick="return confirm('Are you sure?');" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600">Delete</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

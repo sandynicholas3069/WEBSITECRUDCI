@@ -35,7 +35,7 @@ class Department extends CI_Controller {
         redirect('department');
     }
 
-    public function delete ($id) {
+    public function delete($id) {
         $this->Department_model->delete_department($id);
         redirect('department');
     }

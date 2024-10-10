@@ -50,7 +50,7 @@ class Employee extends CI_Controller {
             'salary' => $this->input->post('salary'),
             'department_id' => $this->input->post('department_id')
         ];
-        $this->Employee_model->update_employee($data, $id);
+        $this->Employee_model->update_employee($id, $data);
         redirect('employee');
     }
 
